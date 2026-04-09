@@ -1,0 +1,9 @@
+# Ignore generated build outputs
+*.o
+*.a
+*.so
+*.dylib
+*.out
+build/
+dist/
+*.dSYM/
