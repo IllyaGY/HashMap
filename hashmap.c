@@ -55,14 +55,7 @@ static int allocate_bytes(void **dest, const void *src, size_t len){
     return 0;
 }
 
-static int create_node(
-    hash_node **node_ptr,
-    uint64_t hash,
-    const void *key,
-    size_t key_len,
-    const void *value,
-    size_t value_len
-){
+static int create_node(hash_node **node_ptr, uint64_t hash, const void *key, size_t key_len, const void *value, size_t value_len){
     if (node_ptr == NULL)
     {
         CB_LOG_ERROR("The destination node pointer is NULL");
@@ -240,13 +233,7 @@ int delete_hm(hashmap **map){
     return 0;
 }
 
-int insert_hm(
-    hashmap *map,
-    const void *key,
-    size_t key_len,
-    const void *value,
-    size_t value_len
-){
+int insert_hm(hashmap *map,const void *key,size_t key_len, const void *value, size_t value_len){
     if (map == NULL)
     {
         CB_LOG_ERROR("The hashmap pointer is NULL");
@@ -304,13 +291,7 @@ int insert_hm(
     return 0;
 }
 
-int get_hm(
-    const hashmap *map,
-    const void *key,
-    size_t key_len,
-    const void **value,
-    size_t *value_len
-){
+int get_hm(const hashmap *map, const void *key, size_t key_len, const void **value, size_t *value_len){
     if (map == NULL)
     {
         CB_LOG_ERROR("The hashmap pointer is NULL");
