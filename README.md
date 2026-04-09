@@ -48,3 +48,12 @@ Available `make` targets:
 - `make test-dynamic`: build the ncurses demo linked against `libhm.dylib`
 - `make all`: build all library formats and both demo binaries
 - `make clean`: remove generated files
+
+Versioned releases:
+
+```sh
+./release_version.sh 1.0.0
+./release_version.sh 1.0.0 --git-tag
+```
+
+That creates versioned library artifacts under `dist/<version>/`, along with an optional annotated Git tag.
